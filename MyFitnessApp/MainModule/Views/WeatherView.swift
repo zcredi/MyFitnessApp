@@ -1,8 +1,25 @@
 //
 //  WeatherView.swift
-//  MyFirstApp_20.02.
+//  MyFitnessApp
 //
-//  Created by Сергей Горбачёв on 20.02.2023.
+//  Created by Владислав on 20.02.2023.
 //
 
-import Foundation
+import UIKit
+
+class WeatherView: UIView {
+    enum Constants {
+        
+    }
+    
+    //MARK: - Lifecycle
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+}

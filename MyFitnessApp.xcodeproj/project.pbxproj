@@ -27,7 +27,7 @@
 		8646868629A60CE50029A10D /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		8646868729A60CE60029A10D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		8646868829A60CE70029A10D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		FCD5E62329A3F104006CA331 /* MyFirstApp_20.02..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstApp_20.02..app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCD5E62329A3F104006CA331 /* MyFitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD5E62629A3F104006CA331 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD5E62829A3F104006CA331 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FCD5E62A29A3F104006CA331 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 		FCD5E61A29A3F104006CA331 = {
 			isa = PBXGroup;
 			children = (
-				FCD5E62529A3F104006CA331 /* MyFirstApp_20.02. */,
+				FCD5E62529A3F104006CA331 /* MyFitnessApp */,
 				FCD5E62429A3F104006CA331 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,12 +79,12 @@
 		FCD5E62429A3F104006CA331 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FCD5E62329A3F104006CA331 /* MyFirstApp_20.02..app */,
+				FCD5E62329A3F104006CA331 /* MyFitnessApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FCD5E62529A3F104006CA331 /* MyFirstApp_20.02. */ = {
+		FCD5E62529A3F104006CA331 /* MyFitnessApp */ = {
 			isa = PBXGroup;
 			children = (
 				FCD5E63A29A3F24E006CA331 /* Application */,
@@ -92,7 +92,7 @@
 				FCD5E63B29A3F263006CA331 /* MainModule */,
 				FCD5E63E29A3F281006CA331 /* SupportingFiles */,
 			);
-			path = MyFirstApp_20.02.;
+			path = MyFitnessApp;
 			sourceTree = "<group>";
 		};
 		FCD5E63A29A3F24E006CA331 /* Application */ = {
@@ -158,7 +158,7 @@
 			);
 			name = MyFirstApp_20.02.;
 			productName = MyFirstApp_20.02.;
-			productReference = FCD5E62329A3F104006CA331 /* MyFirstApp_20.02..app */;
+			productReference = FCD5E62329A3F104006CA331 /* MyFitnessApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -176,7 +176,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FCD5E61E29A3F104006CA331 /* Build configuration list for PBXProject "MyFitness" */;
+			buildConfigurationList = FCD5E61E29A3F104006CA331 /* Build configuration list for PBXProject "MyFitnessApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -361,7 +361,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5MT2PBNQ85;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyFirstApp_20.02./SupportingFiles/Info.plist;
+				INFOPLIST_FILE = MyFitnessApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -373,7 +373,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = zcredi.MyFitnessApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MyFitnessApp;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -392,7 +392,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5MT2PBNQ85;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MyFirstApp_20.02./SupportingFiles/Info.plist;
+				INFOPLIST_FILE = MyFitnessApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -404,7 +404,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = zcredi.MyFitnessApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MyFitnessApp;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -417,7 +417,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FCD5E61E29A3F104006CA331 /* Build configuration list for PBXProject "MyFitness" */ = {
+		FCD5E61E29A3F104006CA331 /* Build configuration list for PBXProject "MyFitnessApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FCD5E63529A3F105006CA331 /* Debug */,
