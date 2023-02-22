@@ -19,13 +19,17 @@ class MainViewController: UIViewController {
         static let addButtonWorkoutTopSpacing: CGFloat = 6.0
         static let addButtonWorkoutLeadingSpacing: CGFloat = 13.0
         static let addButtonWorkoutSize: CGFloat = 80.0
+        static let weatherViewTopSpacing: CGFloat = 6.0
+        static let weatherViewLeadingSpacing: CGFloat = 10.0
+        static let weatherViewTrailingSpacing: CGFloat = 12.0
+        static let weatherViewSize: CGFloat = 80.0
     }
     
     //MARK: - Create UI
     
     private lazy var userPhotoImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .userPhotoBackgroundColor
+        imageView.backgroundColor = .grayBackgroundColor
         imageView.layer.borderColor = UIColor.userPhotoBorderColor.cgColor
         imageView.layer.borderWidth = 5
         return imageView
@@ -33,7 +37,7 @@ class MainViewController: UIViewController {
     
     private lazy var userNameLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .userNameTextColor
+        label.textColor = .basicTextColor
         label.text = "Your Name"
         label.font = UIFont(name: UIFont.robotoMedium, size: 24)
         return label
@@ -61,6 +65,7 @@ class MainViewController: UIViewController {
     }()
     
     let calendarView = CalendarView()
+    let weatherView = WeatherView()
     
     //MARK: - Lifecycle
     
@@ -81,6 +86,7 @@ class MainViewController: UIViewController {
        view.addSubview(userPhotoImageView)
        view.addSubview(userNameLabel)
        view.addSubview(addWorkoutButton)
+       view.addSubview(weatherView)
     }
     
     @objc
@@ -118,6 +124,13 @@ extension MainViewController {
             addWorkoutButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.addButtonWorkoutLeadingSpacing),
             addWorkoutButton.heightAnchor.constraint(equalToConstant: Constants.addButtonWorkoutSize),
             addWorkoutButton.widthAnchor.constraint(equalToConstant: Constants.addButtonWorkoutSize)
+        ])
+        weatherView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            weatherView.topAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: Constants.weatherViewTopSpacing),
+            weatherView.leadingAnchor.constraint(equalTo: addWorkoutButton.trailingAnchor, constant: Constants.weatherViewLeadingSpacing),
+            weatherView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Constants.weatherViewTrailingSpacing),
+            weatherView.heightAnchor.constraint(equalToConstant: Constants.weatherViewSize)
         ])
     }
 }
