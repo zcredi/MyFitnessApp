@@ -12,7 +12,7 @@ extension UIColor {
         UIColor(red: 0.941, green: 0.929, blue: 0.886, alpha: 1)
     }
     
-    static var userPhotoBackgroundColor: UIColor {
+    static var grayBackgroundColor: UIColor {
         UIColor(red: 0.762, green: 0.762, blue: 0.762, alpha: 1)
     }
     
@@ -24,7 +24,7 @@ extension UIColor {
         UIColor(red: 0.2, green: 0.553, blue: 0.49, alpha: 1)
     }
     
-    static var userNameTextColor: UIColor {
+    static var basicTextColor: UIColor {
         UIColor(red: 0.318, green: 0.318, blue: 0.314, alpha: 1)
     }
     
