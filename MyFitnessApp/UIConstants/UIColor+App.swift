@@ -1,6 +1,6 @@
 //
 //  UIColor+App.swift
-//  MyFirstApp_20.02.
+//  MyFitnessApp
 //
 //  Created by Владислав on 22.02.2023.
 //

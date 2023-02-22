@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  MyFirstApp_20.02.
+//  MyFitnessApp
 //
 //  Created by Сергей Горбачёв on 20.02.2023.
 //

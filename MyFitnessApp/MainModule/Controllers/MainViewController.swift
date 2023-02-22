@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  MyFirstApp_20.02.
+//  MyFitnessApp
 //
 //  Created by Сергей Горбачёв on 20.02.2023.
 //
@@ -22,7 +22,7 @@ class MainViewController: UIViewController {
     }
     
    private func setupViews(){
-       view.backgroundColor = .backgroundColor
+       view.backgroundColor = .red
     }
 }
 
