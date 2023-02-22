@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  MyFitnessApp
 //
-//  Created by Сергей Горбачёв on 20.02.2023.
+//  Created by Владислав on 20.02.2023.
 //
 
 import UIKit
