@@ -9,7 +9,13 @@ import UIKit
 
 class WeatherView: UIView {
     enum Constants {
-        
+        static let sunImageSize: CGFloat = 62.0
+        static let sunImageTrailingSpacing: CGFloat = 10.0
+        static let weatherStatusLabelSideSpacing: CGFloat = 10.0
+        static let weatherStatusLabelHeightSize: CGFloat = 20.0
+        static let weatherTextLabelTopSpacing: CGFloat = 5.0
+        static let weatherTextLabelBottomSpacing: CGFloat = 5.0
+        static let weatherTextLabelSideSpacing: CGFloat = 10.0
     }
     
     private lazy var sunImageView: UIImageView = {
@@ -21,8 +27,8 @@ class WeatherView: UIView {
     private lazy var weatherStatusLabel: UILabel = {
         let label = UILabel()
         label.text = "Солнечно"
-        label.textColor = .basicTextColor
-        label.font = UIFont(name: UIFont.robotoMedium, size: 18)
+        label.textColor = .specialGray
+        label.font = .robotoMedium18()
         return label
     }()
     
@@ -30,8 +36,8 @@ class WeatherView: UIView {
         let label = UILabel()
         label.text = "Хорошая погода, чтобы позаниматься на улице"
         label.numberOfLines = 0
-        label.textColor = .grayBackgroundColor
-        label.font = UIFont(name: UIFont.robotoMedium, size: 13)
+        label.textColor = .specialGrayTextColor
+        label.font = .robotoMedium12()
         return label
     }()
     
@@ -61,21 +67,24 @@ extension WeatherView {
     private func setConstraints() {
         sunImageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            sunImageView.topAnchor.constraint(equalTo: topAnchor, constant: 7),
-            sunImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
-            sunImageView.heightAnchor.constraint(equalToConstant: 62),
-            sunImageView.widthAnchor.constraint(equalToConstant: 62)
+            sunImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Constants.sunImageTrailingSpacing),
+            sunImageView.heightAnchor.constraint(equalToConstant: Constants.sunImageSize),
+            sunImageView.widthAnchor.constraint(equalToConstant: Constants.sunImageSize),
+            sunImageView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
         weatherStatusLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            weatherStatusLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-            weatherStatusLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10)
+            weatherStatusLabel.topAnchor.constraint(equalTo: topAnchor, constant: Constants.weatherStatusLabelSideSpacing),
+            weatherStatusLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.weatherStatusLabelSideSpacing),
+            weatherStatusLabel.trailingAnchor.constraint(equalTo: sunImageView.leadingAnchor, constant: -Constants.weatherStatusLabelSideSpacing),
+            weatherStatusLabel.heightAnchor.constraint(equalToConstant: Constants.weatherStatusLabelHeightSize)
         ])
         weatherTextLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            weatherTextLabel.topAnchor.constraint(equalTo: weatherStatusLabel.bottomAnchor, constant: 5),
-            weatherTextLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            weatherTextLabel.trailingAnchor.constraint(equalTo: sunImageView.leadingAnchor, constant: -16)
+            weatherTextLabel.topAnchor.constraint(equalTo: weatherStatusLabel.bottomAnchor, constant: Constants.weatherTextLabelTopSpacing),
+            weatherTextLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.weatherTextLabelSideSpacing),
+            weatherTextLabel.trailingAnchor.constraint(equalTo: sunImageView.leadingAnchor, constant: -Constants.weatherTextLabelSideSpacing),
+            weatherTextLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -Constants.weatherTextLabelBottomSpacing)
         ])
     }
 }
