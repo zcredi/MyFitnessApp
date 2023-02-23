@@ -12,6 +12,7 @@
 		8646868929A60CE70029A10D /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8646868629A60CE50029A10D /* Roboto-Bold.ttf */; };
 		8646868A29A60CE70029A10D /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8646868729A60CE60029A10D /* Roboto-Medium.ttf */; };
 		8646868B29A60CE70029A10D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8646868829A60CE70029A10D /* Roboto-Regular.ttf */; };
+		86D1FE6429A7ACE10075C50C /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE6329A7ACE10075C50C /* CalendarCollectionViewCell.swift */; };
 		FCD5E62729A3F104006CA331 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD5E62629A3F104006CA331 /* AppDelegate.swift */; };
 		FCD5E62929A3F104006CA331 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD5E62829A3F104006CA331 /* SceneDelegate.swift */; };
 		FCD5E62B29A3F104006CA331 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD5E62A29A3F104006CA331 /* MainViewController.swift */; };
@@ -27,6 +28,7 @@
 		8646868629A60CE50029A10D /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		8646868729A60CE60029A10D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		8646868829A60CE70029A10D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		86D1FE6329A7ACE10075C50C /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		FCD5E62329A3F104006CA331 /* MyFitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD5E62629A3F104006CA331 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD5E62829A3F104006CA331 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,14 @@
 				8646868829A60CE70029A10D /* Roboto-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		86D1FE6529A7B29F0075C50C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				86D1FE6329A7ACE10075C50C /* CalendarCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		FCD5E61A29A3F104006CA331 = {
@@ -116,6 +126,7 @@
 		FCD5E63C29A3F270006CA331 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				86D1FE6529A7B29F0075C50C /* Cells */,
 				FCD5E63F29A3F94E006CA331 /* CalendarView.swift */,
 				FCD5E64129A40686006CA331 /* WeatherView.swift */,
 			);
@@ -214,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86D1FE6429A7ACE10075C50C /* CalendarCollectionViewCell.swift in Sources */,
 				FCD5E64229A40686006CA331 /* WeatherView.swift in Sources */,
 				FCD5E62B29A3F104006CA331 /* MainViewController.swift in Sources */,
 				FCD5E62729A3F104006CA331 /* AppDelegate.swift in Sources */,

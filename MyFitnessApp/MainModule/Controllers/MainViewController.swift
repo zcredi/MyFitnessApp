@@ -29,32 +29,32 @@ class MainViewController: UIViewController {
     
     private lazy var userPhotoImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .grayBackgroundColor
-        imageView.layer.borderColor = UIColor.userPhotoBorderColor.cgColor
+        imageView.backgroundColor = .specialLine
+        imageView.layer.borderColor = UIColor.white.cgColor
         imageView.layer.borderWidth = 5
         return imageView
     }()
     
     private lazy var userNameLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .basicTextColor
+        label.textColor = .specialDarkGreen
         label.text = "Your Name"
-        label.font = UIFont(name: UIFont.robotoMedium, size: 24)
+        label.font = .robotoMedium24()
         return label
     }()
     
     private lazy var addWorkoutButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = .yellowColor
+        button.backgroundColor = .specialYellow
         button.setImage(UIImage(named: "plus"), for: .normal)
-        button.tintColor = .specialDarkGreenColor
+        button.tintColor = .specialDarkGreen
         button.imageEdgeInsets = UIEdgeInsets(top: 0,
                                               left: 20,
                                               bottom: 15,
                                               right: 0)
         button.setTitle("Add workout", for: .normal)
-        button.setTitleColor(.specialDarkGreenColor, for: .normal)
-        button.titleLabel?.font = UIFont(name: UIFont.robotoMedium, size: 12)
+        button.setTitleColor(.specialDarkGreen, for: .normal)
+        button.titleLabel?.font = .robotoMedium12()
         button.titleEdgeInsets = UIEdgeInsets(top: 50,
                                               left: -40,
                                               bottom: 0,
@@ -81,7 +81,7 @@ class MainViewController: UIViewController {
     }
     
    private func setupViews(){
-       view.backgroundColor = .backgroundColor
+       view.backgroundColor = .specialBackground
        view.addSubview(calendarView)
        view.addSubview(userPhotoImageView)
        view.addSubview(userNameLabel)
