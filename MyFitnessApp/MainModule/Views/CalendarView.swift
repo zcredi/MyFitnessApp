@@ -26,7 +26,7 @@ class CalendarView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-    
+        
         collectionView.register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: Constants.idCalendarCell)
         setupViews()
         setConstraints()
@@ -37,9 +37,9 @@ class CalendarView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-   private func setDelegates() {
-       collectionView.delegate = self
-       collectionView.dataSource = self
+    private func setDelegates() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
     
     private func setupViews() {
@@ -47,7 +47,7 @@ class CalendarView: UIView {
         layer.cornerRadius = 10
         addSubview(collectionView)
     }
- 
+    
 }
 
 //MARK: - setConstraints()

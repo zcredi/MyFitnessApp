@@ -57,6 +57,7 @@ class WeatherView: UIView {
     private func setupViews() {
         backgroundColor = .white
         layer.cornerRadius = 10
+        addShadowOnView()
         addSubview(sunImageView)
         addSubview(weatherStatusLabel)
         addSubview(weatherTextLabel)
