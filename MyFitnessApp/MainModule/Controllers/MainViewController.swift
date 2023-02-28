@@ -23,8 +23,10 @@ class MainViewController: UIViewController {
         static let weatherViewLeadingSpacing: CGFloat = 10.0
         static let weatherViewTrailingSpacing: CGFloat = 12.0
         static let weatherViewSize: CGFloat = 80.0
-        static let workoutTodayLabelTopSpacing: CGFloat = 14
+        static let workoutTodayLabelTopSpacing: CGFloat = 14.0
         static let workoutTodayLabelLeadingSpacing: CGFloat = 13.0
+        static let workoutTableViewTopSpacing: CGFloat = 5.0
+        static let workoutTableViewSideSpacing: CGFloat = 0.0
     }
     
     //MARK: - Create UI
@@ -70,6 +72,7 @@ class MainViewController: UIViewController {
     private let calendarView = CalendarView()
     private let weatherView = WeatherView()
     private let workoutTodayLabel = UILabel(text: "Workout today")
+    private let workoutTableView = MainTableView()
     
     //MARK: - Lifecycle
     
@@ -84,7 +87,7 @@ class MainViewController: UIViewController {
         setConstraints()
     }
     
-    private func setupViews(){
+    private func setupViews() {
         view.backgroundColor = .specialBackground
         view.addSubview(calendarView)
         view.addSubview(userPhotoImageView)
@@ -92,6 +95,7 @@ class MainViewController: UIViewController {
         view.addSubview(addWorkoutButton)
         view.addSubview(weatherView)
         view.addSubview(workoutTodayLabel)
+        view.addSubview(workoutTableView)
     }
     
     @objc
@@ -141,7 +145,14 @@ extension MainViewController {
         NSLayoutConstraint.activate([
             workoutTodayLabel.topAnchor.constraint(equalTo: addWorkoutButton.bottomAnchor, constant: Constants.workoutTodayLabelTopSpacing),
             workoutTodayLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.workoutTodayLabelLeadingSpacing),
-            
+            workoutTodayLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Constants.workoutTodayLabelLeadingSpacing)
+        ])
+        workoutTableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            workoutTableView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor, constant: Constants.workoutTableViewTopSpacing),
+            workoutTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.workoutTableViewSideSpacing),
+            workoutTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Constants.workoutTableViewSideSpacing),
+            workoutTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -Constants.workoutTableViewSideSpacing)
         ])
     }
 }
