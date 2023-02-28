@@ -17,6 +17,8 @@
 		86D1FE6929ACE1DC0075C50C /* UILabel + App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE6829ACE1DC0075C50C /* UILabel + App.swift */; };
 		86D1FE6B29ACE20A0075C50C /* UIStackView + App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE6A29ACE20A0075C50C /* UIStackView + App.swift */; };
 		86D1FE7329ACE78E0075C50C /* MainTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE7229ACE78E0075C50C /* MainTableView.swift */; };
+		86D1FE7529ACEBFB0075C50C /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE7429ACEBFB0075C50C /* WorkoutTableViewCell.swift */; };
+		86D1FE7A29AE4BF40075C50C /* StatisticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE7929AE4BF40075C50C /* StatisticViewController.swift */; };
 		FCD5E62729A3F104006CA331 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD5E62629A3F104006CA331 /* AppDelegate.swift */; };
 		FCD5E62929A3F104006CA331 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD5E62829A3F104006CA331 /* SceneDelegate.swift */; };
 		FCD5E62B29A3F104006CA331 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD5E62A29A3F104006CA331 /* MainViewController.swift */; };
@@ -37,6 +39,8 @@
 		86D1FE6829ACE1DC0075C50C /* UILabel + App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + App.swift"; sourceTree = "<group>"; };
 		86D1FE6A29ACE20A0075C50C /* UIStackView + App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + App.swift"; sourceTree = "<group>"; };
 		86D1FE7229ACE78E0075C50C /* MainTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableView.swift; sourceTree = "<group>"; };
+		86D1FE7429ACEBFB0075C50C /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		86D1FE7929AE4BF40075C50C /* StatisticViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticViewController.swift; sourceTree = "<group>"; };
 		FCD5E62329A3F104006CA331 /* MyFitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD5E62629A3F104006CA331 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD5E62829A3F104006CA331 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,8 +89,33 @@
 			isa = PBXGroup;
 			children = (
 				86D1FE6329A7ACE10075C50C /* CalendarCollectionViewCell.swift */,
+				86D1FE7429ACEBFB0075C50C /* WorkoutTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		86D1FE7629AE4BAB0075C50C /* StatisticModule */ = {
+			isa = PBXGroup;
+			children = (
+				86D1FE7829AE4BCE0075C50C /* Views */,
+				86D1FE7729AE4BC40075C50C /* Controllers */,
+			);
+			path = StatisticModule;
+			sourceTree = "<group>";
+		};
+		86D1FE7729AE4BC40075C50C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				86D1FE7929AE4BF40075C50C /* StatisticViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		86D1FE7829AE4BCE0075C50C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		FCD5E61A29A3F104006CA331 = {
@@ -111,6 +140,7 @@
 				FCD5E63A29A3F24E006CA331 /* Application */,
 				8646868029A60C050029A10D /* UIConstants */,
 				FCD5E63B29A3F263006CA331 /* MainModule */,
+				86D1FE7629AE4BAB0075C50C /* StatisticModule */,
 				FCD5E63E29A3F281006CA331 /* SupportingFiles */,
 			);
 			path = MyFitnessApp;
@@ -238,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86D1FE6429A7ACE10075C50C /* CalendarCollectionViewCell.swift in Sources */,
+				86D1FE7A29AE4BF40075C50C /* StatisticViewController.swift in Sources */,
 				FCD5E64229A40686006CA331 /* WeatherView.swift in Sources */,
 				86D1FE6B29ACE20A0075C50C /* UIStackView + App.swift in Sources */,
 				FCD5E62B29A3F104006CA331 /* MainViewController.swift in Sources */,
@@ -245,6 +276,7 @@
 				FCD5E64029A3F94E006CA331 /* CalendarView.swift in Sources */,
 				86D1FE7329ACE78E0075C50C /* MainTableView.swift in Sources */,
 				FCD5E62929A3F104006CA331 /* SceneDelegate.swift in Sources */,
+				86D1FE7529ACEBFB0075C50C /* WorkoutTableViewCell.swift in Sources */,
 				86D1FE6929ACE1DC0075C50C /* UILabel + App.swift in Sources */,
 				8646868429A60C3D0029A10D /* UIFont+App.swift in Sources */,
 				86D1FE6729A8ED610075C50C /* UIView+App.swift in Sources */,
