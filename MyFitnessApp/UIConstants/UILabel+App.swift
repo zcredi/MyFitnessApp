@@ -16,4 +16,12 @@ extension UILabel {
         self.adjustsFontSizeToFitWidth = true
         self.minimumScaleFactor = 0.5
     }
+    
+    convenience init(text: String = "", font: UIFont?, textColor: UIColor) {
+        self.init()
+        self.text = text
+        self.font = font
+        self.textColor = textColor
+        self.adjustsFontSizeToFitWidth = true
+    }
 }

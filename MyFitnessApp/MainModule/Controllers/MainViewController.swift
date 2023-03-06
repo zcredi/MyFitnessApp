@@ -100,7 +100,9 @@ class MainViewController: UIViewController {
     
     @objc
     private func addWorkoutButtonTapped() {
-        print("Tap tap")
+        let newWorkoutModuleViewController = NewWorkoutModuleViewController()
+        newWorkoutModuleViewController.modalPresentationStyle = .fullScreen
+        present(newWorkoutModuleViewController, animated: true)
     }
 }
 
