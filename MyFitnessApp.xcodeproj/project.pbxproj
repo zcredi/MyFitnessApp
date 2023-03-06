@@ -12,6 +12,11 @@
 		8646868929A60CE70029A10D /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8646868629A60CE50029A10D /* Roboto-Bold.ttf */; };
 		8646868A29A60CE70029A10D /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8646868729A60CE60029A10D /* Roboto-Medium.ttf */; };
 		8646868B29A60CE70029A10D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8646868829A60CE70029A10D /* Roboto-Regular.ttf */; };
+		865580D529B61772001B54B6 /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865580D429B61772001B54B6 /* GreenButton.swift */; };
+		865580D729B61783001B54B6 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865580D629B61783001B54B6 /* CloseButton.swift */; };
+		865580D929B61791001B54B6 /* BrownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865580D829B61791001B54B6 /* BrownTextField.swift */; };
+		865580DB29B6179E001B54B6 /* GreenSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865580DA29B6179E001B54B6 /* GreenSlider.swift */; };
+		865580DE29B641BD001B54B6 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865580DD29B641BD001B54B6 /* SliderView.swift */; };
 		86D1FE6429A7ACE10075C50C /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE6329A7ACE10075C50C /* CalendarCollectionViewCell.swift */; };
 		86D1FE6729A8ED610075C50C /* UIView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE6629A8ED610075C50C /* UIView+App.swift */; };
 		86D1FE6929ACE1DC0075C50C /* UILabel+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE6829ACE1DC0075C50C /* UILabel+App.swift */; };
@@ -22,6 +27,10 @@
 		86D1FE7C29AE56000075C50C /* StatisticTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE7B29AE56000075C50C /* StatisticTableView.swift */; };
 		86D1FE7F29AE57CB0075C50C /* StatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE7E29AE57CB0075C50C /* StatisticTableViewCell.swift */; };
 		86D1FE8229AF84D50075C50C /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE8129AF84D50075C50C /* MainTabBarController.swift */; };
+		86D1FE8B29AF8DD90075C50C /* NewWorkoutModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE8A29AF8DD90075C50C /* NewWorkoutModuleViewController.swift */; };
+		86D1FE8D29B0ECC00075C50C /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE8C29B0ECC00075C50C /* NameView.swift */; };
+		86D1FE8F29B0ECCF0075C50C /* DateAndRepeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE8E29B0ECCF0075C50C /* DateAndRepeatView.swift */; };
+		86D1FE9129B0ECDB0075C50C /* RepsOrTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE9029B0ECDB0075C50C /* RepsOrTimerView.swift */; };
 		FCD5E62729A3F104006CA331 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD5E62629A3F104006CA331 /* AppDelegate.swift */; };
 		FCD5E62929A3F104006CA331 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD5E62829A3F104006CA331 /* SceneDelegate.swift */; };
 		FCD5E62B29A3F104006CA331 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD5E62A29A3F104006CA331 /* MainViewController.swift */; };
@@ -37,6 +46,11 @@
 		8646868629A60CE50029A10D /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		8646868729A60CE60029A10D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		8646868829A60CE70029A10D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		865580D429B61772001B54B6 /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
+		865580D629B61783001B54B6 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		865580D829B61791001B54B6 /* BrownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownTextField.swift; sourceTree = "<group>"; };
+		865580DA29B6179E001B54B6 /* GreenSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenSlider.swift; sourceTree = "<group>"; };
+		865580DD29B641BD001B54B6 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		86D1FE6329A7ACE10075C50C /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		86D1FE6629A8ED610075C50C /* UIView+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+App.swift"; sourceTree = "<group>"; };
 		86D1FE6829ACE1DC0075C50C /* UILabel+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+App.swift"; sourceTree = "<group>"; };
@@ -47,6 +61,10 @@
 		86D1FE7B29AE56000075C50C /* StatisticTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableView.swift; sourceTree = "<group>"; };
 		86D1FE7E29AE57CB0075C50C /* StatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableViewCell.swift; sourceTree = "<group>"; };
 		86D1FE8129AF84D50075C50C /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		86D1FE8A29AF8DD90075C50C /* NewWorkoutModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutModuleViewController.swift; sourceTree = "<group>"; };
+		86D1FE8C29B0ECC00075C50C /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
+		86D1FE8E29B0ECCF0075C50C /* DateAndRepeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndRepeatView.swift; sourceTree = "<group>"; };
+		86D1FE9029B0ECDB0075C50C /* RepsOrTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepsOrTimerView.swift; sourceTree = "<group>"; };
 		FCD5E62329A3F104006CA331 /* MyFitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD5E62629A3F104006CA331 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD5E62829A3F104006CA331 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +90,7 @@
 		8646868029A60C050029A10D /* UIConstants */ = {
 			isa = PBXGroup;
 			children = (
+				865580D329B61747001B54B6 /* Repeatable */,
 				8646868129A60C260029A10D /* UIColor+App.swift */,
 				8646868329A60C3D0029A10D /* UIFont+App.swift */,
 				86D1FE6629A8ED610075C50C /* UIView+App.swift */,
@@ -89,6 +108,25 @@
 				8646868829A60CE70029A10D /* Roboto-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		865580D329B61747001B54B6 /* Repeatable */ = {
+			isa = PBXGroup;
+			children = (
+				865580D429B61772001B54B6 /* GreenButton.swift */,
+				865580D629B61783001B54B6 /* CloseButton.swift */,
+				865580D829B61791001B54B6 /* BrownTextField.swift */,
+				865580DA29B6179E001B54B6 /* GreenSlider.swift */,
+			);
+			path = Repeatable;
+			sourceTree = "<group>";
+		};
+		865580DC29B641B1001B54B6 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				865580DD29B641BD001B54B6 /* SliderView.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 		86D1FE6529A7B29F0075C50C /* Cells */ = {
@@ -142,6 +180,34 @@
 			path = NavigationModule;
 			sourceTree = "<group>";
 		};
+		86D1FE8729AF8D970075C50C /* NewWorkoutModule */ = {
+			isa = PBXGroup;
+			children = (
+				86D1FE8929AF8DB60075C50C /* View */,
+				86D1FE8829AF8DA50075C50C /* Controllers */,
+			);
+			path = NewWorkoutModule;
+			sourceTree = "<group>";
+		};
+		86D1FE8829AF8DA50075C50C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				86D1FE8A29AF8DD90075C50C /* NewWorkoutModuleViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		86D1FE8929AF8DB60075C50C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				865580DC29B641B1001B54B6 /* Subviews */,
+				86D1FE8C29B0ECC00075C50C /* NameView.swift */,
+				86D1FE8E29B0ECCF0075C50C /* DateAndRepeatView.swift */,
+				86D1FE9029B0ECDB0075C50C /* RepsOrTimerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FCD5E61A29A3F104006CA331 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +231,7 @@
 				86D1FE8029AF848E0075C50C /* NavigationModule */,
 				8646868029A60C050029A10D /* UIConstants */,
 				FCD5E63B29A3F263006CA331 /* MainModule */,
+				86D1FE8729AF8D970075C50C /* NewWorkoutModule */,
 				86D1FE7629AE4BAB0075C50C /* StatisticModule */,
 				FCD5E63E29A3F281006CA331 /* SupportingFiles */,
 			);
@@ -293,17 +360,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				86D1FE6429A7ACE10075C50C /* CalendarCollectionViewCell.swift in Sources */,
+				865580DE29B641BD001B54B6 /* SliderView.swift in Sources */,
 				86D1FE7A29AE4BF40075C50C /* StatisticViewController.swift in Sources */,
+				86D1FE9129B0ECDB0075C50C /* RepsOrTimerView.swift in Sources */,
 				86D1FE7F29AE57CB0075C50C /* StatisticTableViewCell.swift in Sources */,
+				86D1FE8F29B0ECCF0075C50C /* DateAndRepeatView.swift in Sources */,
 				FCD5E64229A40686006CA331 /* WeatherView.swift in Sources */,
 				86D1FE7C29AE56000075C50C /* StatisticTableView.swift in Sources */,
 				86D1FE6B29ACE20A0075C50C /* UIStackView+App.swift in Sources */,
+				865580D929B61791001B54B6 /* BrownTextField.swift in Sources */,
 				FCD5E62B29A3F104006CA331 /* MainViewController.swift in Sources */,
 				FCD5E62729A3F104006CA331 /* AppDelegate.swift in Sources */,
 				FCD5E64029A3F94E006CA331 /* CalendarView.swift in Sources */,
+				865580D729B61783001B54B6 /* CloseButton.swift in Sources */,
 				86D1FE8229AF84D50075C50C /* MainTabBarController.swift in Sources */,
 				86D1FE7329ACE78E0075C50C /* MainTableView.swift in Sources */,
+				865580D529B61772001B54B6 /* GreenButton.swift in Sources */,
+				865580DB29B6179E001B54B6 /* GreenSlider.swift in Sources */,
 				FCD5E62929A3F104006CA331 /* SceneDelegate.swift in Sources */,
+				86D1FE8B29AF8DD90075C50C /* NewWorkoutModuleViewController.swift in Sources */,
+				86D1FE8D29B0ECC00075C50C /* NameView.swift in Sources */,
 				86D1FE7529ACEBFB0075C50C /* WorkoutTableViewCell.swift in Sources */,
 				86D1FE6929ACE1DC0075C50C /* UILabel+App.swift in Sources */,
 				8646868429A60C3D0029A10D /* UIFont+App.swift in Sources */,
