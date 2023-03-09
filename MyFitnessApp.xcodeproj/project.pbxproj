@@ -13,6 +13,7 @@
 		8646868A29A60CE70029A10D /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8646868729A60CE60029A10D /* Roboto-Medium.ttf */; };
 		8646868B29A60CE70029A10D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8646868829A60CE70029A10D /* Roboto-Regular.ttf */; };
 		864FF51C29BA35F600838AE8 /* SliderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864FF51B29BA35F600838AE8 /* SliderTypes.swift */; };
+		864FF51F29BA38FA00838AE8 /* Int + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864FF51E29BA38FA00838AE8 /* Int + Extensions.swift */; };
 		865580D529B61772001B54B6 /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865580D429B61772001B54B6 /* GreenButton.swift */; };
 		865580D729B61783001B54B6 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865580D629B61783001B54B6 /* CloseButton.swift */; };
 		865580D929B61791001B54B6 /* BrownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865580D829B61791001B54B6 /* BrownTextField.swift */; };
@@ -50,6 +51,7 @@
 		8646868729A60CE60029A10D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		8646868829A60CE70029A10D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		864FF51B29BA35F600838AE8 /* SliderTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTypes.swift; sourceTree = "<group>"; };
+		864FF51E29BA38FA00838AE8 /* Int + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extensions.swift"; sourceTree = "<group>"; };
 		865580D429B61772001B54B6 /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
 		865580D629B61783001B54B6 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		865580D829B61791001B54B6 /* BrownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownTextField.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 		8646868029A60C050029A10D /* UIConstants */ = {
 			isa = PBXGroup;
 			children = (
+				864FF51D29BA38CB00838AE8 /* UIKit */,
 				865580D329B61747001B54B6 /* Repeatable */,
 				8646868129A60C260029A10D /* UIColor+App.swift */,
 				8646868329A60C3D0029A10D /* UIFont+App.swift */,
@@ -122,6 +125,14 @@
 				864FF51B29BA35F600838AE8 /* SliderTypes.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		864FF51D29BA38CB00838AE8 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				864FF51E29BA38FA00838AE8 /* Int + Extensions.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		865580D329B61747001B54B6 /* Repeatable */ = {
@@ -408,6 +419,7 @@
 				864FF51C29BA35F600838AE8 /* SliderTypes.swift in Sources */,
 				86D1FE6729A8ED610075C50C /* UIView+App.swift in Sources */,
 				8646868229A60C260029A10D /* UIColor+App.swift in Sources */,
+				864FF51F29BA38FA00838AE8 /* Int + Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
