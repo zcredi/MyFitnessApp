@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FCD5E62229A3F104006CA331"
                BuildableName = "MyFitnessApp.app"
-               BlueprintName = "MyFirstApp_20.02."
+               BlueprintName = "MyFitnessApp"
                ReferencedContainer = "container:MyFitnessApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,7 +46,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FCD5E62229A3F104006CA331"
             BuildableName = "MyFitnessApp.app"
-            BlueprintName = "MyFirstApp_20.02."
+            BlueprintName = "MyFitnessApp"
             ReferencedContainer = "container:MyFitnessApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -63,7 +63,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FCD5E62229A3F104006CA331"
             BuildableName = "MyFitnessApp.app"
-            BlueprintName = "MyFirstApp_20.02."
+            BlueprintName = "MyFitnessApp"
             ReferencedContainer = "container:MyFitnessApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
