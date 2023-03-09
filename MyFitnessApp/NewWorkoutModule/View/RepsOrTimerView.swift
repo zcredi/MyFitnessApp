@@ -30,13 +30,15 @@ class RepsOrTimerView: UIView {
         return view
     }()
     
-    private lazy var setsView = SliderView(name: "Sets", minValue: 0, maxValue: 10)
+    private lazy var setsView = SliderView(name: "Sets", minValue: 0, maxValue: 10, type: .sets)
     
     private lazy var repeatOrTimerLabel = UILabel(text: "Choose repeat or timer")
-    private lazy var repsView = SliderView(name: "Reps", minValue: 0, maxValue: 50)
-    private lazy var timerView = SliderView(name: "Timer", minValue: 0, maxValue: 600)
+    private lazy var repsView = SliderView(name: "Reps", minValue: 0, maxValue: 50, type: .reps)
+    private lazy var timerView = SliderView(name: "Timer", minValue: 0, maxValue: 600, type: .timer)
     
     private lazy var sliderStackView = UIStackView()
+    
+    public var (sets, reps, timer) = (0, 0, 0)
     
     //MARK: - Lifecycle
 
@@ -45,10 +47,17 @@ class RepsOrTimerView: UIView {
         
         setupViews()
         setConstraints()
+        setDelegates()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func setDelegates() {
+        setsView.delegate = self
+        repsView.delegate = self
+        timerView.delegate = self
     }
     
     private func setupViews() {
@@ -61,6 +70,31 @@ class RepsOrTimerView: UIView {
         backView.addSubview(sliderStackView)
     }
 }
+
+//MARK: - SliderViewProtocol
+
+extension RepsOrTimerView: SliderViewProtocol {
+    func changeValue(type: SliderType, value: Int) {
+        switch type {
+        case .sets:
+            sets = value
+        case .reps:
+            reps = value
+            repsView.isActive = true
+            timerView.isActive = false
+            timer = 0
+        case .timer:
+            timer = value
+            repsView.isActive = false
+            timerView.isActive = true
+            reps = 0
+        }
+    }
+    
+    
+}
+
+//MARK: - setConstraints()
 
 extension RepsOrTimerView {
     private func setConstraints() {

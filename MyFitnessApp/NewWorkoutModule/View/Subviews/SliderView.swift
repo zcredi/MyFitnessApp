@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol SliderViewProtocol: AnyObject {
+    func changeValue(type: SliderType, value: Int)
+}
+
 class SliderView: UIView {
     enum Constants {
         static let stackViewTopSpacing: CGFloat = 0.0
@@ -16,6 +20,8 @@ class SliderView: UIView {
     
     //MARK: - Create UI
     
+    weak var delegate: SliderViewProtocol?
+    
     private lazy var nameLabel = UILabel(text: "Name", font: .robotoMedium18(), textColor: .specialGray)
     
     private lazy var numberLabel = UILabel(text: "0", font: .robotoMedium24(), textColor: .specialGray)
@@ -23,6 +29,24 @@ class SliderView: UIView {
     private lazy var slider = GreenSlider()
     
     private lazy var stackView = UIStackView()
+    
+    private var sliderType: SliderType?
+    
+    public var isActive: Bool = true {
+        didSet {
+            if self.isActive {
+                nameLabel.alpha = 1
+                numberLabel.alpha = 1
+                slider.alpha = 1
+            } else {
+                nameLabel.alpha = 0.5
+                numberLabel.alpha = 0.5
+                slider.alpha = 0.5
+                slider.value = 0
+                nameLabel.text = "0"
+            }
+        }
+    }
     
     //MARK: - Lifecycle
 
@@ -33,11 +57,12 @@ class SliderView: UIView {
         setConstraints()
     }
     
-    convenience init(name: String, minValue: Float, maxValue: Float) {
+    convenience init(name: String, minValue: Float, maxValue: Float, type: SliderType) {
         self.init(frame: .zero)
         nameLabel.text = name
         slider.minimumValue = minValue
         slider.maximumValue = maxValue
+        sliderType = type
     }
     
     required init?(coder: NSCoder) {
@@ -45,11 +70,22 @@ class SliderView: UIView {
     }
     
     private func setupViews() {
+        slider.addTarget(self, action: #selector(sliderChanged), for: .valueChanged)
+        
         let labelsStackView = UIStackView(arrangedSubviews: [nameLabel, numberLabel], axis: .horizontal, spacing: 10)
         labelsStackView.distribution = .equalSpacing
         
         stackView = UIStackView(arrangedSubviews: [labelsStackView, slider], axis: .vertical, spacing: 10)
         addSubview(stackView)
+    }
+    
+ @objc
+    private func sliderChanged() {
+        let intValueSlider = Int(slider.value)
+        numberLabel.text = sliderType == .timer ? intValueSlider.getTimeFromSeconds() : "\(intValueSlider)"
+        
+        guard let type = sliderType else { return }
+        delegate?.changeValue(type: type, value: intValueSlider)
     }
 }
 
