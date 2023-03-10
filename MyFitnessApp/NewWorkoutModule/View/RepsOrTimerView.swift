@@ -38,6 +38,8 @@ class RepsOrTimerView: UIView {
     
     private lazy var sliderStackView = UIStackView()
     
+    public var (sets, reps, timer) = (0, 0, 0)
+    
     //MARK: - Lifecycle
 
     override init(frame: CGRect) {
