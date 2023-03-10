@@ -36,11 +36,14 @@ class NewWorkoutModuleViewController: UIViewController {
     
     private lazy var saveButton = GreenButton(text: "SAVE")
     
+    private lazy var workoutModel = WorkoutModel()
+    private lazy var workoutImage = UIImage(named: "testWorkout")
+    
     //MARK: - Lifecycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupViews()
         setConstraints()
     }
@@ -51,7 +54,7 @@ class NewWorkoutModuleViewController: UIViewController {
         view.addSubview(newWorkoutLabel)
         view.addSubview(closeButton)
         closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
-    
+        
         slidersStackView = UIStackView(arrangedSubviews: [nameView, dateAndRepeatView, repsOrTimerView], axis: .vertical, spacing: 30)
         view.addSubview(slidersStackView)
         
@@ -67,6 +70,18 @@ class NewWorkoutModuleViewController: UIViewController {
     @objc
     private func saveButtonTapped() {
         dismiss(animated: true)
+        setModel()
+        print(workoutModel)
+    }
+    
+    private func setModel() {
+        workoutModel.workoutName = nameView.getNameTextFieldText()
+        workoutModel.workoutDate = dateAndRepeatView.getDateAndRepeat().date
+        workoutModel.workoutRepeat = dateAndRepeatView.getDateAndRepeat().isRepeat
+        workoutModel.workoutSets = repsOrTimerView.sets
+        workoutModel.workoutReps = repsOrTimerView.reps
+        workoutModel.workoutTimer = repsOrTimerView.timer
+        
     }
 }
 

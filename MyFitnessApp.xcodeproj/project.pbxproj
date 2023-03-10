@@ -13,6 +13,7 @@
 		8646868A29A60CE70029A10D /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8646868729A60CE60029A10D /* Roboto-Medium.ttf */; };
 		8646868B29A60CE70029A10D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8646868829A60CE70029A10D /* Roboto-Regular.ttf */; };
 		864FF51C29BA35F600838AE8 /* SliderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864FF51B29BA35F600838AE8 /* SliderTypes.swift */; };
+		864FF52229BB5AFB00838AE8 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864FF52129BB5AFB00838AE8 /* WorkoutModel.swift */; };
 		865580D529B61772001B54B6 /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865580D429B61772001B54B6 /* GreenButton.swift */; };
 		865580D729B61783001B54B6 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865580D629B61783001B54B6 /* CloseButton.swift */; };
 		865580D929B61791001B54B6 /* BrownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865580D829B61791001B54B6 /* BrownTextField.swift */; };
@@ -50,6 +51,7 @@
 		8646868729A60CE60029A10D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		8646868829A60CE70029A10D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		864FF51B29BA35F600838AE8 /* SliderTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTypes.swift; sourceTree = "<group>"; };
+		864FF52129BB5AFB00838AE8 /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
 		865580D429B61772001B54B6 /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
 		865580D629B61783001B54B6 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		865580D829B61791001B54B6 /* BrownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownTextField.swift; sourceTree = "<group>"; };
@@ -120,6 +122,14 @@
 			isa = PBXGroup;
 			children = (
 				864FF51B29BA35F600838AE8 /* SliderTypes.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		864FF52029BB5AD100838AE8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				864FF52129BB5AFB00838AE8 /* WorkoutModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -265,6 +275,7 @@
 		FCD5E63B29A3F263006CA331 /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
+				864FF52029BB5AD100838AE8 /* Models */,
 				FCD5E63C29A3F270006CA331 /* Views */,
 				FCD5E63D29A3F276006CA331 /* Controllers */,
 			);
@@ -398,6 +409,7 @@
 				86D1FE8229AF84D50075C50C /* MainTabBarController.swift in Sources */,
 				86D1FE7329ACE78E0075C50C /* MainTableView.swift in Sources */,
 				865580D529B61772001B54B6 /* GreenButton.swift in Sources */,
+				864FF52229BB5AFB00838AE8 /* WorkoutModel.swift in Sources */,
 				865580DB29B6179E001B54B6 /* GreenSlider.swift in Sources */,
 				FCD5E62929A3F104006CA331 /* SceneDelegate.swift in Sources */,
 				86D1FE8B29AF8DD90075C50C /* NewWorkoutModuleViewController.swift in Sources */,
