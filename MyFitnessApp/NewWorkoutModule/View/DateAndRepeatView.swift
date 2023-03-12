@@ -80,6 +80,10 @@ class DateAndRepeatView: UIView {
         
         backView.addSubview(repeatStackView)
     }
+    
+    public func getDateAndRepeat() -> (date: Date, isRepeat: Bool) {
+        (datePicker.date, repeatSwitch.isOn)
+    }
 }
 
 //MARK: - setConstraints()

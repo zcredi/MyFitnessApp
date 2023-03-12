@@ -14,6 +14,9 @@
 		8646868B29A60CE70029A10D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8646868829A60CE70029A10D /* Roboto-Regular.ttf */; };
 		864FF51C29BA35F600838AE8 /* SliderTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864FF51B29BA35F600838AE8 /* SliderTypes.swift */; };
 		864FF51F29BA38FA00838AE8 /* Int + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864FF51E29BA38FA00838AE8 /* Int + Extensions.swift */; };
+		864FF52529BB767500838AE8 /* WorkoutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864FF52429BB767500838AE8 /* WorkoutModel.swift */; };
+		864FF52729BB819D00838AE8 /* Date + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864FF52629BB819D00838AE8 /* Date + Extensions.swift */; };
+		864FF52A29BB84E000838AE8 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864FF52929BB84E000838AE8 /* RealmManager.swift */; };
 		865580D529B61772001B54B6 /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865580D429B61772001B54B6 /* GreenButton.swift */; };
 		865580D729B61783001B54B6 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865580D629B61783001B54B6 /* CloseButton.swift */; };
 		865580D929B61791001B54B6 /* BrownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865580D829B61791001B54B6 /* BrownTextField.swift */; };
@@ -52,6 +55,9 @@
 		8646868829A60CE70029A10D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		864FF51B29BA35F600838AE8 /* SliderTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderTypes.swift; sourceTree = "<group>"; };
 		864FF51E29BA38FA00838AE8 /* Int + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int + Extensions.swift"; sourceTree = "<group>"; };
+		864FF52429BB767500838AE8 /* WorkoutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutModel.swift; sourceTree = "<group>"; };
+		864FF52629BB819D00838AE8 /* Date + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extensions.swift"; sourceTree = "<group>"; };
+		864FF52929BB84E000838AE8 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		865580D429B61772001B54B6 /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
 		865580D629B61783001B54B6 /* CloseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		865580D829B61791001B54B6 /* BrownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownTextField.swift; sourceTree = "<group>"; };
@@ -131,8 +137,25 @@
 			isa = PBXGroup;
 			children = (
 				864FF51E29BA38FA00838AE8 /* Int + Extensions.swift */,
+				864FF52629BB819D00838AE8 /* Date + Extensions.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		864FF52329BB766400838AE8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				864FF52429BB767500838AE8 /* WorkoutModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		864FF52829BB84BB00838AE8 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				864FF52929BB84E000838AE8 /* RealmManager.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		865580D329B61747001B54B6 /* Repeatable */ = {
@@ -259,6 +282,7 @@
 				FCD5E63B29A3F263006CA331 /* MainModule */,
 				86D1FE8729AF8D970075C50C /* NewWorkoutModule */,
 				86D1FE7629AE4BAB0075C50C /* StatisticModule */,
+				864FF52829BB84BB00838AE8 /* Service */,
 				FCD5E63E29A3F281006CA331 /* SupportingFiles */,
 			);
 			path = MyFitnessApp;
@@ -276,6 +300,7 @@
 		FCD5E63B29A3F263006CA331 /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
+				864FF52329BB766400838AE8 /* Models */,
 				FCD5E63C29A3F270006CA331 /* Views */,
 				FCD5E63D29A3F276006CA331 /* Controllers */,
 			);
@@ -393,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86D1FE6429A7ACE10075C50C /* CalendarCollectionViewCell.swift in Sources */,
+				864FF52729BB819D00838AE8 /* Date + Extensions.swift in Sources */,
 				865580DE29B641BD001B54B6 /* SliderView.swift in Sources */,
 				86D1FE7A29AE4BF40075C50C /* StatisticViewController.swift in Sources */,
 				86D1FE9129B0ECDB0075C50C /* RepsOrTimerView.swift in Sources */,
@@ -408,6 +434,7 @@
 				865580D729B61783001B54B6 /* CloseButton.swift in Sources */,
 				86D1FE8229AF84D50075C50C /* MainTabBarController.swift in Sources */,
 				86D1FE7329ACE78E0075C50C /* MainTableView.swift in Sources */,
+				864FF52529BB767500838AE8 /* WorkoutModel.swift in Sources */,
 				865580D529B61772001B54B6 /* GreenButton.swift in Sources */,
 				865580DB29B6179E001B54B6 /* GreenSlider.swift in Sources */,
 				FCD5E62929A3F104006CA331 /* SceneDelegate.swift in Sources */,
@@ -415,6 +442,7 @@
 				86D1FE8D29B0ECC00075C50C /* NameView.swift in Sources */,
 				86D1FE7529ACEBFB0075C50C /* WorkoutTableViewCell.swift in Sources */,
 				86D1FE6929ACE1DC0075C50C /* UILabel+App.swift in Sources */,
+				864FF52A29BB84E000838AE8 /* RealmManager.swift in Sources */,
 				8646868429A60C3D0029A10D /* UIFont+App.swift in Sources */,
 				864FF51C29BA35F600838AE8 /* SliderTypes.swift in Sources */,
 				86D1FE6729A8ED610075C50C /* UIView+App.swift in Sources */,
