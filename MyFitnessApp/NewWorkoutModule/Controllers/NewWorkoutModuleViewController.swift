@@ -36,6 +36,9 @@ class NewWorkoutModuleViewController: UIViewController {
     
     private lazy var saveButton = GreenButton(text: "SAVE")
     
+    private lazy var workoutModel = WorkoutModel()
+    private lazy var workoutImage = UIImage(named: "testWorkout")
+    
     //MARK: - Lifecycle
 
     override func viewDidLoad() {
@@ -66,7 +69,26 @@ class NewWorkoutModuleViewController: UIViewController {
     
     @objc
     private func saveButtonTapped() {
-        dismiss(animated: true)
+        setModel()
+        print(workoutModel)
+        RealmManager.shared.saveWorkoutModel(workoutModel)
+    }
+    
+    //MARK: - setModel()
+    
+    private func setModel() {
+        let getDateAndRepeat = dateAndRepeatView.getDateAndRepeat()
+        
+        workoutModel.workoutName = nameView.getNameTextFieldText()
+        workoutModel.workoutDate = getDateAndRepeat.date
+        workoutModel.workoutRepeat = getDateAndRepeat.isRepeat
+        workoutModel.workoutNumberOfDay = getDateAndRepeat.date.getWeekdayNumber()
+        workoutModel.workoutSets = repsOrTimerView.sets
+        workoutModel.workoutReps = repsOrTimerView.reps
+        workoutModel.workoutTimer = repsOrTimerView.timer
+        
+        guard let imageData = workoutImage?.pngData() else { return }
+        workoutModel.workoutImage = imageData
     }
 }
 
