@@ -22,6 +22,7 @@
 		865580D929B61791001B54B6 /* BrownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865580D829B61791001B54B6 /* BrownTextField.swift */; };
 		865580DB29B6179E001B54B6 /* GreenSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865580DA29B6179E001B54B6 /* GreenSlider.swift */; };
 		865580DE29B641BD001B54B6 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865580DD29B641BD001B54B6 /* SliderView.swift */; };
+		866092BE29C39865000D646E /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866092BD29C39865000D646E /* UIViewController + Extension.swift */; };
 		86D1FE6429A7ACE10075C50C /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE6329A7ACE10075C50C /* CalendarCollectionViewCell.swift */; };
 		86D1FE6729A8ED610075C50C /* UIView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE6629A8ED610075C50C /* UIView+App.swift */; };
 		86D1FE6929ACE1DC0075C50C /* UILabel+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE6829ACE1DC0075C50C /* UILabel+App.swift */; };
@@ -63,6 +64,7 @@
 		865580D829B61791001B54B6 /* BrownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownTextField.swift; sourceTree = "<group>"; };
 		865580DA29B6179E001B54B6 /* GreenSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenSlider.swift; sourceTree = "<group>"; };
 		865580DD29B641BD001B54B6 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		866092BD29C39865000D646E /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		86D1FE6329A7ACE10075C50C /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		86D1FE6629A8ED610075C50C /* UIView+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+App.swift"; sourceTree = "<group>"; };
 		86D1FE6829ACE1DC0075C50C /* UILabel+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+App.swift"; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			children = (
 				864FF51E29BA38FA00838AE8 /* Int + Extensions.swift */,
 				864FF52629BB819D00838AE8 /* Date + Extensions.swift */,
+				866092BD29C39865000D646E /* UIViewController + Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				FCD5E64229A40686006CA331 /* WeatherView.swift in Sources */,
 				86D1FE7C29AE56000075C50C /* StatisticTableView.swift in Sources */,
 				86D1FE6B29ACE20A0075C50C /* UIStackView+App.swift in Sources */,
+				866092BE29C39865000D646E /* UIViewController + Extension.swift in Sources */,
 				865580D929B61791001B54B6 /* BrownTextField.swift in Sources */,
 				FCD5E62B29A3F104006CA331 /* MainViewController.swift in Sources */,
 				FCD5E62729A3F104006CA331 /* AppDelegate.swift in Sources */,
