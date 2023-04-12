@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol CalendarViewProtocol: AnyObject {
+    func selectItem(date: Date)
+}
+
 class CalendarView: UIView {
     enum Constants {
         static let idCalendarCell: String = "idCalendarCell"
@@ -15,9 +19,13 @@ class CalendarView: UIView {
         static let collectionViewTrailingSpacing: CGFloat = 10.0
     }
     
+    weak var calendarDelegate: CalendarViewProtocol?
+    
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         collectionView.backgroundColor = .clear
         return collectionView
     }()
@@ -46,6 +54,11 @@ class CalendarView: UIView {
         backgroundColor = .specialGreen
         layer.cornerRadius = 10
         addSubview(collectionView)
+        collectionView.showsHorizontalScrollIndicator = true
+    }
+    
+    func setDelegate(_ delegate: CalendarViewProtocol?) {
+        calendarDelegate = delegate
     }
     
 }
@@ -68,11 +81,19 @@ extension CalendarView {
 
 extension CalendarView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        7
+        30
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.idCalendarCell, for: indexPath) as? CalendarCollectionViewCell else { return UICollectionViewCell() }
+        
+        let dateTimeZone = Date()
+        let weekArray = dateTimeZone.getWeekArray()
+        cell.dateForCell(numberOfDay: weekArray[1][indexPath.row], dayOfWeek: weekArray[0][indexPath.row])
+        
+        if indexPath.item == 6 {
+            collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .right)
+        }
         return cell
     }
 }
@@ -81,7 +102,7 @@ extension CalendarView: UICollectionViewDataSource {
 
 extension CalendarView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: collectionView.frame.width / 8,
+        CGSize(width: collectionView.frame.width / 9.4,
                height: collectionView.frame.height)
     }
     
@@ -92,5 +113,8 @@ extension CalendarView: UICollectionViewDelegateFlowLayout {
 
 extension CalendarView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let dateTimeZone = Date()
+        let date = dateTimeZone.offsetDay(day: 6 - indexPath.item)
+        calendarDelegate?.selectItem(date: date)
     }
 }
