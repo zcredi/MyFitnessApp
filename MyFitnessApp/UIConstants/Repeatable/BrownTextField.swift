@@ -13,6 +13,7 @@ class BrownTextField: UITextField {
         super.init(frame: frame)
         
         configure()
+        delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -29,5 +30,13 @@ class BrownTextField: UITextField {
        leftViewMode = .always
        clearButtonMode = .always
        returnKeyType = .done
+    }
+}
+
+//MARK: - UITextFieldDelegate
+
+extension BrownTextField: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
     }
 }

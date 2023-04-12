@@ -69,6 +69,12 @@ class RepsOrTimerView: UIView {
         sliderStackView = UIStackView(arrangedSubviews: [setsView, repeatOrTimerLabel, repsView, timerView], axis: .vertical, spacing: 10)
         backView.addSubview(sliderStackView)
     }
+    
+    public func resetRepsOrTimerParameters() {
+        setsView.resetSliderView()
+        repsView.resetSliderView()
+        timerView.resetSliderView()
+    }
 }
 
 //MARK: - SliderViewProtocol
