@@ -27,6 +27,7 @@ class MainViewController: UIViewController {
         static let workoutTodayLabelLeadingSpacing: CGFloat = 13.0
         static let workoutTableViewTopSpacing: CGFloat = 5.0
         static let workoutTableViewSideSpacing: CGFloat = 0.0
+        static let noWorkoutImageViewTopSpacing: CGFloat = 24.0
     }
     
     //MARK: - Create UI
@@ -63,16 +64,24 @@ class MainViewController: UIViewController {
                                               left: -40,
                                               bottom: 0,
                                               right: 0)
-        button.addShadowOnView()    
+        button.addShadowOnView()
         button.layer.cornerRadius = 10
         button.addTarget(self, action: #selector(addWorkoutButtonTapped), for: .touchUpInside)
         return button
+    }()
+    
+    private lazy var noWorkoutImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "noWorkout")
+        imageView.contentMode = .scaleAspectFit
+        return imageView
     }()
     
     private let calendarView = CalendarView()
     private let weatherView = WeatherView()
     private let workoutTodayLabel = UILabel(text: "Workout today")
     private let workoutTableView = MainTableView()
+    private var workoutArray = [WorkoutModel]()
     
     //MARK: - Lifecycle
     
@@ -85,6 +94,7 @@ class MainViewController: UIViewController {
         
         setupViews()
         setConstraints()
+        selectItem(date: Date())
     }
     
     private func setupViews() {
@@ -97,6 +107,7 @@ class MainViewController: UIViewController {
         view.addSubview(weatherView)
         view.addSubview(workoutTodayLabel)
         view.addSubview(workoutTableView)
+        view.addSubview(noWorkoutImageView)
     }
     
     @objc
@@ -105,13 +116,42 @@ class MainViewController: UIViewController {
         newWorkoutModuleViewController.modalPresentationStyle = .fullScreen
         present(newWorkoutModuleViewController, animated: true)
     }
+    
+    private func getWorkouts(date: Date) {
+        let weekday = date.getWeekdayNumber()
+        let startDate = date.startEndDate().startDate
+        let endDate = date.startEndDate().endDate
+        
+        let predicateRepeat = NSPredicate(format: "workoutNumberOfDay = \(weekday) AND workoutRepeat = true")
+        let predicateUnrepeat = NSPredicate(format: "workoutRepeat = false AND workoutDate BETWEEN %@", [startDate, endDate])
+        let compound = NSCompoundPredicate(type: .or, subpredicates: [predicateRepeat, predicateUnrepeat])
+        
+        let resultArray = RealmManager.shared.getResultWorkoutModel()
+        let filtredArray = resultArray.filter(compound).sorted(byKeyPath: "workoutName")
+        workoutArray = filtredArray.map({ $0 })
+    }
+    
+    private func checkWorkoutToday() {
+//        if workoutArray.count == 0 {
+//            noWorkoutImageView.isHidden = false
+//            workoutTableView.isHidden = true
+//        } else {
+//            noWorkoutImageView.isHidden = true
+//            workoutTableView.isHidden = false
+//        }
+        noWorkoutImageView.isHidden = !workoutArray.isEmpty
+        workoutTableView.isHidden = workoutArray.isEmpty
+    }
 }
 
 //MARK: - CalendarViewProtocol
 
 extension MainViewController: CalendarViewProtocol {
     func selectItem(date: Date) {
-        print(date)
+       getWorkouts(date: date)
+        workoutTableView.setWorkoutArray(array: workoutArray)
+        workoutTableView.reloadData()
+        checkWorkoutToday()
     }
 }
 
@@ -164,6 +204,12 @@ extension MainViewController {
             workoutTableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: Constants.workoutTableViewSideSpacing),
             workoutTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -Constants.workoutTableViewSideSpacing),
             workoutTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -Constants.workoutTableViewSideSpacing)
+        ])
+        noWorkoutImageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            noWorkoutImageView.topAnchor.constraint(equalTo: workoutTodayLabel.bottomAnchor, constant: Constants.noWorkoutImageViewTopSpacing),
+            noWorkoutImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            noWorkoutImageView.heightAnchor.constraint(equalTo: noWorkoutImageView.widthAnchor)
         ])
     }
 }

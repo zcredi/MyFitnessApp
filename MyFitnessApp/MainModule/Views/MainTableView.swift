@@ -11,6 +11,8 @@ class MainTableView: UITableView {
     enum Constants {
         static let idTableViewCell = "idTableViewCell"
     }
+    
+    private var workoutArray = [WorkoutModel]()
 
     //MARK: - Lifecycle
     
@@ -38,18 +40,23 @@ class MainTableView: UITableView {
         dataSource = self
     }
     
+    public func setWorkoutArray(array: [WorkoutModel]) {
+        workoutArray = array
+    }
+    
 }
 
 //MARK: - UITableViewDataSource
 
 extension MainTableView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        workoutArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.idTableViewCell, for: indexPath) as? WorkoutTableViewCell else { return UITableViewCell() }
-        
+        let workoutModel = workoutArray[indexPath.row]
+        cell.configure(model: workoutModel)
         return cell
     }
     
