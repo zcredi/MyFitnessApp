@@ -22,4 +22,10 @@ class RealmManager {
             realm.add(model)
         }
     }
+    
+    func deleteWorkoutModel(_ model: WorkoutModel) {
+        try! realm.write {
+            realm.delete(model)
+        }
+    }
 }

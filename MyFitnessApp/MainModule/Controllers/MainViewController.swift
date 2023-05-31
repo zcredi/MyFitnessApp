@@ -107,6 +107,7 @@ class MainViewController: UIViewController {
         view.addSubview(weatherView)
         view.addSubview(workoutTodayLabel)
         view.addSubview(workoutTableView)
+        workoutTableView.mainDeleteDelegate = self
         view.addSubview(noWorkoutImageView)
     }
     
@@ -152,6 +153,15 @@ extension MainViewController: CalendarViewProtocol {
         workoutTableView.setWorkoutArray(array: workoutArray)
         workoutTableView.reloadData()
         checkWorkoutToday()
+    }
+}
+
+extension MainViewController: MainDeleteTableViewProtocol {
+    func deleteWorkout(model: WorkoutModel, index: Int) {
+        RealmManager.shared.deleteWorkoutModel(model)
+        workoutArray.remove(at: index)
+        workoutTableView.setWorkoutArray(array: workoutArray)
+        workoutTableView.reloadData()
     }
 }
 

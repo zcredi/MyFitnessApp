@@ -7,12 +7,18 @@
 
 import UIKit
 
+protocol MainDeleteTableViewProtocol: AnyObject {
+    func deleteWorkout(model: WorkoutModel, index: Int)
+}
+
 class MainTableView: UITableView {
     enum Constants {
         static let idTableViewCell = "idTableViewCell"
     }
     
     private var workoutArray = [WorkoutModel]()
+    
+    weak var mainDeleteDelegate: MainDeleteTableViewProtocol?
 
     //MARK: - Lifecycle
     
@@ -68,5 +74,18 @@ extension MainTableView: UITableViewDataSource {
 extension MainTableView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         100
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "") { [weak self] _, _, _ in
+            guard let self = self else { return }
+            let deleteModel = self.workoutArray[indexPath.row]
+            self.mainDeleteDelegate?.deleteWorkout(model: deleteModel, index: indexPath.row)
+        }
+        
+        action.backgroundColor = .specialBackground
+        action.image = UIImage(named: "delete")
+        
+        return UISwipeActionsConfiguration(actions: [action])
     }
 }
