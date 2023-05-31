@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol WorkoutCellProtocol: AnyObject {
+    func startButtonTapped(model: WorkoutModel)
+}
+
 class WorkoutTableViewCell: UITableViewCell {
     enum Constants {
         static let backgroundCellTopSpacing: CGFloat = 5.0
@@ -22,6 +26,8 @@ class WorkoutTableViewCell: UITableViewCell {
         static let startButtonSideSpacing: CGFloat = 10.0
         static let startButtonHeightSize: CGFloat = 30.0
     }
+    
+    weak var workoutCellDelegate: WorkoutCellProtocol?
     
     private lazy var backgroundCell: UIView = {
         let view = UIView()
@@ -95,6 +101,7 @@ class WorkoutTableViewCell: UITableViewCell {
     }
     
     private lazy var labelsStackView = UIStackView()
+    private var workoutModel = WorkoutModel()
     
     
     //MARK: - Lifecycle
@@ -127,10 +134,11 @@ class WorkoutTableViewCell: UITableViewCell {
     
     @objc
     private func startButtonTapped() {
-        print("Tapped StartButton")
+        workoutCellDelegate?.startButtonTapped(model: workoutModel)
     }
     
     public func configure(model: WorkoutModel) {
+        workoutModel = model
         workoutNameLabel.text = model.workoutName
         
         if model.workoutTimer == 0 {

@@ -63,6 +63,7 @@ extension MainTableView: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.idTableViewCell, for: indexPath) as? WorkoutTableViewCell else { return UITableViewCell() }
         let workoutModel = workoutArray[indexPath.row]
         cell.configure(model: workoutModel)
+        cell.workoutCellDelegate = mainDeleteDelegate as? WorkoutCellProtocol
         return cell
     }
     

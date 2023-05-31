@@ -85,6 +85,12 @@ class MainViewController: UIViewController {
     
     //MARK: - Lifecycle
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        selectItem(date: Date())
+    }
+    
     override func viewDidLayoutSubviews() {
         userPhotoImageView.layer.cornerRadius = userPhotoImageView.frame.width / 2
     }
@@ -94,7 +100,6 @@ class MainViewController: UIViewController {
         
         setupViews()
         setConstraints()
-        selectItem(date: Date())
     }
     
     private func setupViews() {
@@ -156,12 +161,26 @@ extension MainViewController: CalendarViewProtocol {
     }
 }
 
+//MARK: - MainDeleteTableViewProtocol
+
 extension MainViewController: MainDeleteTableViewProtocol {
     func deleteWorkout(model: WorkoutModel, index: Int) {
         RealmManager.shared.deleteWorkoutModel(model)
         workoutArray.remove(at: index)
         workoutTableView.setWorkoutArray(array: workoutArray)
         workoutTableView.reloadData()
+    }
+}
+
+//MARK: - WorkoutCellProtocol
+
+extension MainViewController: WorkoutCellProtocol {
+    func startButtonTapped(model: WorkoutModel) {
+        if model.workoutTimer == 0 {
+            print("reps")
+        } else {
+            print("timer")
+        }
     }
 }
 
