@@ -73,6 +73,22 @@ class StatisticTableViewCell: UITableViewCell {
         addSubview(stackViewStatisticLabels)
         addSubview(lineView)
     }
+    
+    public func configure(differenceWorkout: DifferenceWorkout) {
+        trainingLabel.text = differenceWorkout.name
+        beforeLabel.text = "Before: \(differenceWorkout.firstReps)"
+        nowLabel.text = "Now: \(differenceWorkout.lastReps)"
+        
+        let difference = differenceWorkout.lastReps - differenceWorkout.firstReps
+        numberTrainingLabel.text = "\(difference)"
+        
+        switch difference {
+        case ..<0: numberTrainingLabel.textColor = .red
+        case 1...: numberTrainingLabel.textColor = .specialGreen
+        default:
+            numberTrainingLabel.textColor = .specialGray
+        }
+    }
 }
 
 extension StatisticTableViewCell {
