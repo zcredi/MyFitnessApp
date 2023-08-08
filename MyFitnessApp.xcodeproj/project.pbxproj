@@ -25,6 +25,7 @@
 		865580DE29B641BD001B54B6 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865580DD29B641BD001B54B6 /* SliderView.swift */; };
 		866092BE29C39865000D646E /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 866092BD29C39865000D646E /* UIViewController + Extension.swift */; };
 		86850EB12A30FCE20000D280 /* SelectWorkoutCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86850EB02A30FCE20000D280 /* SelectWorkoutCollectionView.swift */; };
+		86850EB42A3229850000D280 /* SelectWorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86850EB32A3229850000D280 /* SelectWorkoutCell.swift */; };
 		86D1FE6429A7ACE10075C50C /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE6329A7ACE10075C50C /* CalendarCollectionViewCell.swift */; };
 		86D1FE6729A8ED610075C50C /* UIView+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE6629A8ED610075C50C /* UIView+App.swift */; };
 		86D1FE6929ACE1DC0075C50C /* UILabel+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D1FE6829ACE1DC0075C50C /* UILabel+App.swift */; };
@@ -69,6 +70,7 @@
 		865580DD29B641BD001B54B6 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		866092BD29C39865000D646E /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		86850EB02A30FCE20000D280 /* SelectWorkoutCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectWorkoutCollectionView.swift; sourceTree = "<group>"; };
+		86850EB32A3229850000D280 /* SelectWorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectWorkoutCell.swift; sourceTree = "<group>"; };
 		86D1FE6329A7ACE10075C50C /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		86D1FE6629A8ED610075C50C /* UIView+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+App.swift"; sourceTree = "<group>"; };
 		86D1FE6829ACE1DC0075C50C /* UILabel+App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+App.swift"; sourceTree = "<group>"; };
@@ -192,6 +194,14 @@
 			path = Subviews;
 			sourceTree = "<group>";
 		};
+		86850EB22A32296C0000D280 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				86850EB32A3229850000D280 /* SelectWorkoutCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		86D1FE6529A7B29F0075C50C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +275,7 @@
 		86D1FE8929AF8DB60075C50C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				86850EB22A32296C0000D280 /* Cell */,
 				865580DC29B641B1001B54B6 /* Subviews */,
 				86D1FE8C29B0ECC00075C50C /* NameView.swift */,
 				86850EB02A30FCE20000D280 /* SelectWorkoutCollectionView.swift */,
@@ -455,6 +466,7 @@
 				86D1FE8229AF84D50075C50C /* MainTabBarController.swift in Sources */,
 				86D1FE7329ACE78E0075C50C /* MainTableView.swift in Sources */,
 				864FF52529BB767500838AE8 /* WorkoutModel.swift in Sources */,
+				86850EB42A3229850000D280 /* SelectWorkoutCell.swift in Sources */,
 				865580D529B61772001B54B6 /* GreenButton.swift in Sources */,
 				865580DB29B6179E001B54B6 /* GreenSlider.swift in Sources */,
 				FCD5E62929A3F104006CA331 /* SceneDelegate.swift in Sources */,

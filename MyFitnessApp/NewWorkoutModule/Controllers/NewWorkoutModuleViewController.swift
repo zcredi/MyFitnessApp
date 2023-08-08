@@ -12,9 +12,10 @@ class NewWorkoutModuleViewController: UIViewController {
         static let newWorkoutLabelTopSpacing: CGFloat = 10.0
         static let closeButtonTrailingSpacing: CGFloat = 22.0
         static let closeButtonzSizeSpacing: CGFloat = 30.0
-        static let nameViewHeightSpacing: CGFloat = 60.0
+        static let nameViewHeightSpacing: CGFloat = 58.0
+        static let selectWorkoutCollectionViewHeightSpacing: CGFloat = 85.0
         static let dateAndRepeatViewHeightSpacing: CGFloat = 115.0
-        static let repsOrTimerViewHeightSpacing: CGFloat = 310.0
+        static let repsOrTimerViewHeightSpacing: CGFloat = 290.0
         static let slidersStackViewTopSpacing: CGFloat = 10.0
         static let slidersStackViewSideSpacing: CGFloat = 22.0
         static let saveButtonTopSpacing: CGFloat = 25.0
@@ -29,6 +30,7 @@ class NewWorkoutModuleViewController: UIViewController {
     private lazy var closeButton = CloseButton(type: .system)
     
     private lazy var nameView = NameView()
+    private lazy var selectWorkoutCollectionView = SelectWorkoutCollectionView()
     private lazy var dateAndRepeatView = DateAndRepeatView()
     private lazy var repsOrTimerView = RepsOrTimerView()
     
@@ -56,7 +58,10 @@ class NewWorkoutModuleViewController: UIViewController {
         view.addSubview(closeButton)
         closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
     
-        slidersStackView = UIStackView(arrangedSubviews: [nameView, dateAndRepeatView, repsOrTimerView], axis: .vertical, spacing: 30)
+        slidersStackView = UIStackView(arrangedSubviews: [nameView,
+                                                          selectWorkoutCollectionView,
+                                                          dateAndRepeatView,
+                                                          repsOrTimerView], axis: .vertical, spacing: 20)
         view.addSubview(slidersStackView)
         
         view.addSubview(saveButton)
@@ -148,8 +153,10 @@ extension NewWorkoutModuleViewController {
         nameView.translatesAutoresizingMaskIntoConstraints = false
         dateAndRepeatView.translatesAutoresizingMaskIntoConstraints = false
         repsOrTimerView.translatesAutoresizingMaskIntoConstraints = false
+        selectWorkoutCollectionView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             nameView.heightAnchor.constraint(equalToConstant: Constants.nameViewHeightSpacing),
+            selectWorkoutCollectionView.heightAnchor.constraint(equalToConstant: Constants.selectWorkoutCollectionViewHeightSpacing),
             dateAndRepeatView.heightAnchor.constraint(equalToConstant: Constants.dateAndRepeatViewHeightSpacing),
             repsOrTimerView.heightAnchor.constraint(equalToConstant: Constants.repsOrTimerViewHeightSpacing)
         ])
